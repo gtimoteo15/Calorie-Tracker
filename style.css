@@ -5,11 +5,11 @@ body{
     
 }
 header{
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid grey;
     background-image: linear-gradient(to right, rgba(56, 182, 255), rgba(137, 196, 244));
 }
 footer{
-  border-top: 5px solid black;
+  border-top: 5px solid grey;
   background-image: linear-gradient(to right, rgba(56, 182, 255), rgba(137, 196, 244));
   height: 200px;
   display: flex;
@@ -42,8 +42,10 @@ footer{
   }
 
 .img1{
-    height: 156.25px;
-    width: 403.13px;
+    margin-top: -100px;
+    margin-bottom: -100px;
+    height: 400px;
+    width: 480px;
 }
 
 /* Nav Bar*/
