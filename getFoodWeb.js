@@ -25,11 +25,11 @@ function returnText(){
         alert(params.query + " nutrients:")
         //alert food nutrient header to webpage
         alert(d)
-        let nutrientData = getData.foods[0].foodNutrients[1].value + getData.foods[0].foodNutrients[1].unitName
+        let nutrientData = getData.then.foods[0].foodNutrients[1].value + getData.then.foods[0].foodNutrients[1].unitName
         alert(nutrientData)
         //alert nutrient value and unit(grams) from JSON payload
 
-        let nutrientData2 = getData.foods[0].foods[0].foodNutrients[1].nutrientName
+        let nutrientData2 = getData.then.foods[0].foods[0].foodNutrients[1].nutrientName
         alert(nutrientData2)
         //alert nutrient name on webpage
         //will convert grams to kcal in future iteration, 1g = 7.716179 kcal
