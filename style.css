@@ -6,7 +6,7 @@ body{
 }
 header{
     border-bottom: 5px solid grey;
-    background-image: linear-gradient(to right, rgba(56, 182, 255), rgba(137, 196, 244));
+    background-image: linear-gradient(to right, rgb(36, 30, 196), rgb(114, 166, 239));
 }
 footer{
   border-top: 5px solid grey;

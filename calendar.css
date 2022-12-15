@@ -58,7 +58,7 @@
       height: 100%; }
     .calendar .left-side {
       width: 320px;
-      background-image: linear-gradient(to right, rgba(56, 182, 255), rgba(137, 196, 244));
+      background-image: linear-gradient(to right, rgb(36, 30, 196), rgba(137, 196, 244));
       float: left; }
     .calendar .current-day, .calendar .current-day-events {
       padding-top: 40px; }
