@@ -3,11 +3,6 @@
 //prints data onto console, next iteration will output onto app dynamically
 
 const fetch = require("node-fetch");
-function returnText(){
-    let input = document.getElementById("userInput").value;
-    alert(input)
-
-
 const params = {
     api_key: 'fAzg1XPbecDcFUIgnq0JQu2FBaE52RagYu82mULv',
     query: document.getElementById("userInput").value,
@@ -16,25 +11,29 @@ const params = {
     //specifies the average survey version of queried food rather than branded
     pagesize: 1,
 }
-
 const api_url = 
-`https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${encodeURIComponent(params.api_key)}&query=${encodeURIComponent(params.query)}&dataType=${encodeURIComponent(params.dataType)}&pageSize=${encodeURIComponent(params.pagesize)}`
-// og: `https://api.nal.usda.gov/fdc/v1/foods...{encodeURIComponent(params.api_key)}&query=${encodeURIComponent(params.query)}&dataType=${encodeURIComponent(params.dataType)}&pageSize=${encodeURIComponent(params.pagesize)}`
-//working e.g.: https://api.nal.usda.gov/fdc/v1/foods/search?query=apple&pageSize=2&api_key=3WXEQZGOWTgLsqsSArGB7xgNYd5zRj7QRfdhskOc
+    `https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${encodeURIComponent(params.api_key)}&query=${encodeURIComponent(params.query)}&dataType=${encodeURIComponent(params.dataType)}&pageSize=${encodeURIComponent(params.pagesize)}`
 
 
-function getData() {
-    return fetch(api_url)
-    .then(response => response.json())
+function returnText(){
+    let input = document.getElementById("userInput").value;
+    alert(input)
 
-    console.log(params.query + " nutrients:");
-    //prints food nutrient header to console
+    function getData() {
+        return fetch(api_url)
+        .then(response => response.json())
+        alert(params.query + " nutrients:")
+        //alert food nutrient header to webpage
+        alert(d)
+        let nutrientData = getData.foods[0].foodNutrients[1].value + getData.foods[0].foodNutrients[1].unitName
+        alert(nutrientData)
+        //alert nutrient value and unit(grams) from JSON payload
 
-    getData().then(data => console.log(data.foods[0].foodNutrients[1].value + data.foods[0].foodNutrients[1].unitName))
-    //print nutrient value and unit(grams) from JSON payload
-    //will convert grams to kcal in future iteration, 1g = 7.716179 kcal
-    getData().then(data => console.log(data.foods[0].foodNutrients[1].nutrientName))
-    //print nutrient name in console
-}
+        let nutrientData2 = getData.foods[0].foods[0].foodNutrients[1].nutrientName
+        alert(nutrientData2)
+        //alert nutrient name on webpage
+        //will convert grams to kcal in future iteration, 1g = 7.716179 kcal
+        
+    }
 
 }
